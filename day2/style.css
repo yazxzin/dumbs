@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin:0px;
+    font-family: 'Poppins', sans-serif; 
+}
+
+body {
+    background-color: lightgray;
+}
+nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    gap: 20px;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav {
+    display: flex;
+    background-color: #F4F3F3;
+    height: 50px;
+}
+
+nav ul img {
+    width: 30px;
+    height: 30px;
+    margin-top: 7px;
+    object-fit: contain;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li a:hover {
+    font-weight: bold;
+}
+   
+.right-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 30px;
+    width: 100%;
+    
+}
+
+.right-button a {
+    background-color: #111727;
+    color: white;
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 10px;
+    border-style: none;
+}
+
+.right-button :hover {
+    color: white;
+}
+
+.Container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 0 3px 10px black;
+    border-radius: 15px;
+    padding: 20px;
+    margin:200px;
+    margin-top:20px;
+    width: auto;
+    justify-content: center;
+    background-color: white;
+}
+
+.kiri { 
+    padding: 20px;   
+    width: 400px; 
+    text-align: justify; 
+    font-size: larger;
+    margin-right: 50px;
+}
+.kiri h1 {
+    font-size: xx-large;
+}
+
+.kiri p {
+    text-align:justify;
+}
+
+.coba {
+    display: flex;
+    flex-direction: row;
+}
+.contact-button {
+    text-align: justify;
+    margin-top: 20px;
+}
+
+.contact-button button {
+    background-color: #111727; 
+    color: #ffff; 
+    border-radius: 30px; 
+    width: 150px;
+    height: 30px; 
+    cursor: pointer;
+}
+
+.download-cv {
+    padding: 10px;   
+    width: 480px; 
+    text-align: justify;
+}
+
+.download-cv a {
+    text-decoration: none;
+    color: #111727;
+}
+
+.sosmed {
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    margin-top: 20px;
+    font-size: 40px;
+    gap: 5px;
+}
+
+.sosmed :hover {
+    font-size: 50px;
+}
+
+.sosmed a {
+    color: black;
+}
+
+.kanan {
+    padding: 20px; 
+    width: 250px; 
+    height: 400px;
+    box-shadow: 0px 0px 20px;
+    border-radius: 20px; 
+    margin-top: 30;
+    color: black;
+}
+
+.kanan img {
+    height: 350px; 
+    width: 250px; 
+    border-radius: 20px; 
+    border: 2px; 
+}
+
+.kanan div {
+    text-align: center;
+    color: black;
+    font-size: small;
+}
