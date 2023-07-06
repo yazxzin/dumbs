@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+        * {
+            font-family: 'Poppins', sans-serif;
+            margin: 0px;
+        }
+
+        body {
+            background-color: lightgray;
+        }
+        
+        input {
+            background-color: white;
+            padding: 5px;
+            border-radius: 5px;
+        }
+           
+        .right-button {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+            margin-right: 30px;
+            width: 100%;
+            
+        }
+
+        .right-button a {
+            background-color: #111727;
+            color: white;
+            text-decoration: none;
+            padding: 7px;
+            border-radius: 10px;
+            border-style: none;
+        }
+
+        .text {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            width: 350px;
+        }
+
+        .form-container div {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-container div label {
+            font-weight: bold;
+        }
+
+        .form-container div input {
+            box-shadow: 0px 0px 5px;
+        }
+        
+        .form-container select {
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px;
+        }
+
+        .form-container div textarea {
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px;
+        }
+        
+        .form-container button {
+            background-color: #4930b6; 
+            color: #ffff; 
+            border-radius: 30px; 
+            margin-top: 20px;
+            width: 150px;
+            height: 30px; 
+            border:none
+        }
+        .contact-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            height: 100vh;
+            margin-top: 50px;
+
+        }
