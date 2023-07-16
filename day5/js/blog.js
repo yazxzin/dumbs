@@ -16,7 +16,7 @@ function addBlog(event) {
   let distance = endDate - startDate; 
 
   let miliSecond = 1000;
-  let secondInHour = 3600; 
+  let secondInHour = 3600;
   let hourInDay = 24;
   let dayInWeek = 7;
   let dayInMonth = 30;
@@ -52,6 +52,7 @@ function addBlog(event) {
   }
 
   console.log(duration);
+
 
   let technologies = [];
 
@@ -89,10 +90,11 @@ function addBlog(event) {
   let blog = {
     image,
     projectName,
-    duration : "3 Bulan",
+    duration,
     description,
     technologiesHTML,
     author: "Haqi Ayassi",
+    durationPost : new Date(),
   };
 
   dataBlog.push(blog);
@@ -110,16 +112,17 @@ function renderBlog() {
     `<div class="container-card">
                     <a href="#"><img src= ${dataBlog[i].image} alt=""/></a>
                 <h3>Dumbways Mobile App - 2023</h3>
-                <span>Durasi : ${dataBlog[i].duration} | ${dataBlog[i].author}</span>
-                <div class="Post">
-            </div>
-            <p>
+                <span>Duration : ${dataBlog[i].duration} | ${dataBlog[i].author}</span>
+                <p>
                 ${dataBlog[i].description}
-            </p>
-            <div class="programming-language">
+                </p>
+                <div class="programming-language">
                 ${dataBlog[i].technologiesHTML}
+                <div class="Post">
+                <span>${getDurationPost(dataBlog[i].durationPost)}</span>
             </div>
-            <div class="btn-group">
+                </div>
+                <div class="btn-group">
               <button>Edit</button>
               <button>Delete</button>
             </div>
@@ -127,3 +130,46 @@ function renderBlog() {
     }
 }
 
+function getDurationPost(time) {
+  let timeNow = new Date();
+  let timePost = time;
+
+  let durationPost = timeNow - timePost;
+  console.log(durationPost);
+
+  let miliSecond = 1000;
+  let secondInHour = 3600; 
+  let minutesInHour = 60;
+  let hourInDay = 24;
+
+  let durationPostDay = Math.floor(
+    durationPost / (miliSecond * secondInHour * hourInDay)
+  );
+  let durationPostHour = Math.floor(durationPost / (miliSecond * secondInHour));
+  let durationPostMinute = Math.floor(
+    durationPost / (miliSecond * minutesInHour)
+  );
+  let durationPostSecond = Math.floor(durationPost / miliSecond);
+
+  if (durationPostSecond == 1) {
+    return `${durationPostSecond} second ago`;
+  } else if (durationPostSecond <= 60) {
+    return `${durationPostSecond} seconds ago`;
+  } else if (durationPostMinute == 1) {
+    return `${durationPostMinute} minute ago`;
+  } else if (durationPostMinute <= 60) {
+    return `${durationPostMinute} minutes ago`;
+  } else if (durationPostHour == 1) {
+    return `${durationPostHour} hour Ago`;
+  } else if (durationPostHour <= 24) {
+    return `${durationPostHour} hours ago`;
+  } else if (durationPostDay == 1) {
+    return `${durationPostDay} day ago`;
+  } else if (durationPostDay <= 30) {
+    return `${durationPostDay} days ago`;
+  } 
+}
+
+setInterval(function () {
+  renderBlog();
+}, 1000);
