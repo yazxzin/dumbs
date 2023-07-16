@@ -119,9 +119,7 @@ input{
 
 .label-image label p {
     padding: 10px;
-    border-radius: 5px;
-    background-color: rgb(209, 209, 209);
-    color: rgb(158, 158, 158);
+    color: black;
 }
 
 .label-image label i {
