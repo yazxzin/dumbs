@@ -33,8 +33,8 @@
 //     let name
 // }
 
-function submitData(surya) {
-    surya.preventDefault()
+function submitData(event) {
+    event.preventDefault()
     // DOM -> Document Object Model (untuk memanipulasi element HTML melalui javascript)
 
     let name = document.getElementById("input-name").value // Cintara Surya Elidanto
