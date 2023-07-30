@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact</title>
+    <link rel="stylesheet" href="../css/all.css"/>
+    <link rel="stylesheet" href="../css/nav.css"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li>
+                <img src="../image/image.jpg"/>
+            </li>
+            <li class="nav-item"><a href="index.html">Home</a></li>
+            <li class="nav-item"><a href="blog.html">Blog</a></li>
+            <li class="nav-item"><a href="testimonial.html">Testimonial</a></li>
+        </ul>
+        <dev class="right-button nav-item">
+            <a href="contact.html">Contact Me</a>
+        </dev>
+
+        <div class="right-button" id="hamburger-btn">
+            <button onclick="openHamburger()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    <div class="hamburger-container" id="hamburger-container">
+        <a href="index.html">Home</a>
+        <a href="blog.html">My Project</a>
+        <a href="testimonial.html">Testimonial</a>
+        <a href="contact.html" class="nav-active">Contact Me</a>
+    </div>
+    
+
+    <div class="text">
+        <h1>GET IN TOUCH</h1>
+    </div>
+
+    <div class="contact-container">
+        <form class="form-container">
+            <div>
+                <label>
+                    Name
+                </label>
+                <input id="input-name"/>
+            </div>
+            <div>
+                <label>
+                    Email
+                </label>
+                <input id="input-email"/>
+            </div>
+            <div>
+                <label>
+                    Phone Number
+                </label>
+                <input id="input-phone"/>
+            </div>
+            <div>
+                <label>
+                    Subject
+                </label>
+                <select id="input-subject">
+                    <option value=""> Pilih Subject...</option>
+                    <option value="Frontend Dev">Frontend dev</option>
+                    <option value="Backend Dev">Backend dev</option>
+                    <option value="Fullstack Dev">Fullstack dev</option>
+                </select> 
+            </div>
+            <div>
+                <label>
+                    Your Massage
+                </label>   
+                <textarea id="input-message"></textarea>
+            </div>
+            <button type="submit" onclick="submitData(event)">submit</button>
+        </form>
+    </div>
+     <script src="../js/contact.js"></script>
+     <script src="../js/hamburger.js"></script>
+</body>
+</html>
